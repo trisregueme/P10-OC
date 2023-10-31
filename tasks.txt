@@ -29,3 +29,16 @@ Pour aller plus loin
 
 J’avais aussi prévu de réaliser 3 tests unitaires et 3 tests d’intégration afin d’améliorer la couverture de code. 
 Cette étape est facultative, mais intéressante à suivre si le temps le permet.
+
+----------
+
+Tests réussis :
+helpers/date
+containers/slider
+    -> Slider débuggué - width des images à modifier pour qu'elle fit dans la page ?
+
+Liste des bugs corrigés :
+- La première image du slider n'affichait pas le mois de Janvier, la fonction associée a été corrigée.
+- Après les 3 évènements, le slider affichait un élément blanc, bug résolu.
+- Le carrousel affiche désormais les évènements dans l'ordre décroissant (+récent -> moins récent)
+- les boutons radio du caroussel étaient figés et n'affichaient pas la position réel du slider (statique), bug résolu
