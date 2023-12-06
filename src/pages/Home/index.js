@@ -13,9 +13,13 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const {data} = useData()
+  const { data } = useData()
+  // Filtering Data by date
+  const filteredByDate = data?.events.sort((evtA, evtB) =>
+    new Date(evtA.date) < new Date(evtB.date) ? -1 : 1) || []
+  // giving "last" the value of the last event realised to display it in the footer
   const last = 
-    data ? data.events[data.events.length - 1] : null
+    filteredByDate ? filteredByDate[filteredByDate.length - 1] : null
   return <>
     <header>
       <Menu />
